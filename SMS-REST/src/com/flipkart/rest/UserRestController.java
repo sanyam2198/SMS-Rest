@@ -33,27 +33,17 @@ public class UserRestController {
 	}
 	
 	
+
 //	@POST
 //	@Path("/post")
-//	@Consumes("application/json")
-//	@Produces(MediaType.APPLICATION_JSON)
-//	
-//	public Response CreateTrack(Course course)
-//	{
-//		System.out.println("Hit Post Service");
-//		
-//		System.out.println("Course Id "+ course.getCourseid());
-//		System.out.println("Course Name "+ course.getCoursename());
-//		//System.out.println("Course Fee "+ course.getFee());
-//		
+//	@Consumes(MediaType.APPLICATION_JSON)
+//	public Response addCourse(Course course){
 //		AdminInterface adminOperation = new AdminOperation();
 //		adminOperation.addCourse(course);
-//		
-//		String result = "Track Saved: " + course;
-//		
+//		String result = "Course saved at id : " + course.getCourseid();
 //		return Response.status(201).entity(result).build();
 //	}
-
+	
 	@DELETE
 	@Path("/delete/{courseid}")
 	public Response deleteCustomer(@PathParam("courseid") int courseid) {
@@ -63,14 +53,16 @@ public class UserRestController {
 	}
 	
 //	@PUT
-//	@Path("/update")
-//	@Consumes("application/json")
+//	@Path("/updateCourse")
 //	@Produces(MediaType.APPLICATION_JSON)
-//	public Course updateCustomer(@PathParam("courseid") int courseid) {
+//	@Consumes("/application/json")
+//	public Response updateCourse(Course course) {
 //		AdminInterface adminOperation = new AdminOperation();
-//		adminOperation.editCourse(courseid);
-//		
+//		adminOperation.updateCourse(course);
+//		String result = "Course updated!";
+//		return Response.status(201).entity(result).build();
 //	}
+
 	
 }
 
